@@ -34,8 +34,7 @@ def browser(request):
         browser = webdriver.Firefox(options=options_firefox)
     else:
         print("\nstart chrome browser for test..")
-        browser = webdriver.Chrome(options=options)  # если не прописываем в командной строке какой браузер хотим
-        # использовать то запускается в хроме
+        browser = webdriver.Chrome(options=options)
 
     yield browser
     print("\nquit browser..")
