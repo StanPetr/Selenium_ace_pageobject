@@ -10,6 +10,14 @@ class ProductPage(BasePage, ProductPageLocators):
     def should_be_promo_code_in_url(self):  # 1.1 check promo in URL
         assert "/?promo=newYear" in self.browser.current_url, "promo code missed"
 
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.PRODUCT_IN_CONFIRMATION), \
+            "Success message is presented, but should not be"
+
+    def should_disappeared_success_message(self):
+        assert self.is_disappeared(*ProductPageLocators.PRODUCT_IN_CONFIRMATION), \
+            "Success message is presented, but should not be"
+
     def click_button_add_to_basket(self):  # 2 click button
         button = self.browser.find_element(*ProductPageLocators.ADD_BTN)
         button.click()

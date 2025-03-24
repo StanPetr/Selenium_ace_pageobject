@@ -6,6 +6,18 @@ class MainPageLocators():
     BASKET_LINK = (By.LINK_TEXT, "View basket")
 
 
+class BasePageLocators():
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
+    BASKET_LINK = (By.LINK_TEXT, "View basket")
+
+
+class BasketPageLocators():
+    BASKET_HAS_ITEMS = (By.CSS_SELECTOR, ".row>.col-sm-6.h3")
+    EMPTY_BASKET_TEXT = (By.CSS_SELECTOR, "#content_inner>p")
+
+
+
 class LoginPageLocators():
     LOGIN_FORM = (By.CSS_SELECTOR, "#login_form")
     REGISTER_FORM = (By.CSS_SELECTOR, "#register_form")
