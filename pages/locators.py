@@ -1,29 +1,34 @@
 from selenium.webdriver.common.by import By
 
 
-class MainPageLocators():
+class MainPageLocators:
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     BASKET_LINK = (By.LINK_TEXT, "View basket")
 
 
-class BasePageLocators():
+class BasePageLocators:
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
+    USER_ICON = (By.CSS_SELECTOR, ".icon-user")
     BASKET_LINK = (By.LINK_TEXT, "View basket")
 
 
-class BasketPageLocators():
+class BasketPageLocators:
     BASKET_HAS_ITEMS = (By.CSS_SELECTOR, ".row>.col-sm-6.h3")
     EMPTY_BASKET_TEXT = (By.CSS_SELECTOR, "#content_inner>p")
 
 
 
-class LoginPageLocators():
+class LoginPageLocators:
     LOGIN_FORM = (By.CSS_SELECTOR, "#login_form")
     REGISTER_FORM = (By.CSS_SELECTOR, "#register_form")
+    EMAIL_REGISTER_FIELD = (By.CSS_SELECTOR, "div #id_registration-email")
+    PASSWORD_REGISTER_FIELD = (By.CSS_SELECTOR, "div #id_registration-password1")
+    PASSWORD_CONFIRM_FIELD = (By.CSS_SELECTOR, "div #id_registration-password2")
+    REGISTER_BUTTON = (By.NAME, "registration_submit")
 
 
-class ProductPageLocators():
+class ProductPageLocators:
     PRODUCT_NAME = (By.CSS_SELECTOR, "h1:nth-child(1)")
     ADD_BTN = (By.CLASS_NAME, "btn.btn-lg.btn-primary.btn-add-to-basket")
     PRODUCT_IN_CONFIRMATION = (By.XPATH, "//*[@id='messages']/div[1]/div/strong")
